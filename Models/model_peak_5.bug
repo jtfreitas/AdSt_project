@@ -11,10 +11,10 @@ model{
 
     # Priors for  A, B, x0, w
 
-    A ~ dnorm( 6587 , 50 )
-    B ~ dnorm( 81 , 10 )
+    A ~ dnorm( 12254 , 50 )
+    B ~ dnorm( 899 , 10 )
 
-    x0 ~ dunif( 4499 , 4649 )
+    x0 ~ dunif( 2275 , 2285 )
     w ~ dunif(1,10)
       
 }
