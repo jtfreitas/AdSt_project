@@ -1,20 +1,16 @@
 model{
 
-    #The likelihood:
+            #The likelihood: 
 
-    for (i in 1:length(x)){
-        S[i] <- (A * exp((-(x[i]-x0)^2) / ( 2 *w^2)) + B)
+for (i in 1:length(x)){
+S[i] <- (A * exp((-(x[i]-x0)^2) / ( 2 *w^2)) + B)
+y[i] ~ dpois(S[i])
+}
 
-        y[i] ~ dpois(S[i]) 
-    } 
+            # Priors for  A, B, x0, w 
 
-
-    # Priors for  A, B, x0, w
-
-    A ~ dnorm( 2325 , 50 )
-    B ~ dnorm( 201 , 10 )
-
-    x0 ~ dunif( 1097 , 1107 )
-    w ~ dunif(1,10)
-      
+A ~ dnorm(140317,50)
+B ~ dnorm(13637,10)
+x0 ~ dunif(1488,1508)
+w ~ dunif(1,10)
 }

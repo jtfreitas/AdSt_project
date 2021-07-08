@@ -7,7 +7,7 @@ model{
         f[i] <- sqrt(4*2*log(2) * F *x[i] * w + we**2);  
         
         y[i] ~ dnorm(f[i],0.5);
- 
+
     } 
 
 
