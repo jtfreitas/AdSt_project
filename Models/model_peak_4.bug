@@ -3,7 +3,8 @@ model{
             #The likelihood: 
 
 for (i in 1:length(x)){
-S[i] <- (A * exp((-(x[i]-x0)^2) / ( 2 *w^2)) + B)
+
+S[i] <- (A * dgamma(x[i],x0**2/w**2,x0/w**2) + B)
 y[i] ~ dpois(S[i])
 }
 
