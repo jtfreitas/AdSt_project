@@ -1,6 +1,7 @@
 model{
 
     #The likelihood:
+      
     F = 0.113 #Fano factor
     
     for (i in 1:length(x)){
@@ -8,15 +9,14 @@ model{
         
         y[i] ~ dnorm(f[i],sigma);
  
-    } 
+    }   
 
 
     # Priors for  
-
-    w ~ dunif(1.e-3,1);
-    we ~ dnorm(3,0.25);
+     w ~ dunif(1.e-3,1);
+    we ~ dunif(0,5)#dnorm(3,0.25);
     sigma ~ dnorm(0,1);
-    #F ~dnorm(0.113,0.05)
+    #F ~dnorm(0.113,0.05) 
 
       
     }
