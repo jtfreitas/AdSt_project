@@ -18,7 +18,7 @@
 
 
 
-##For this project we:
+## For this project we:
 + used a Bayesian approach to infere the FWHM of each gamma peak for all available gamma sources.
 + performed a calibration of the detector by associating the centroid of each peak to the nominal value of the detected gamma full energy peak.
 + used MCMC to study the behaviour of the energy resolution as a function of the photon energy.
